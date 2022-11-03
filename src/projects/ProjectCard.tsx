@@ -54,7 +54,7 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
           {/* noOfLines will limit the description to 3 lines of real estate, after which the description is truncated to '...' */}
           {project.description}
         </Box>
-        <Box as='p'>Budget: ${project.budget.toLocaleString()}</Box>
+        <Box as='p'>Budget: ${Number(project.budget).toLocaleString()}</Box>
         {/* toLocaleString will format the number from 1000 to 1,000 */}
 
         <Button

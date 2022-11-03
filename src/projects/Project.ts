@@ -5,7 +5,9 @@ export class Project {
   imageUrl: string = '';
   contractTypeId: number | undefined;
   contractSignedOn: Date = new Date();
-  budget: number = 0;
+  budget: string = '';
+  // i changed this type to be a string because of input issues
+  // the default initialized value was 0 which could never be removed, unless other numbers were intered
   isActive: boolean = false;
   get isNew(): boolean {
     return this.id === undefined;
