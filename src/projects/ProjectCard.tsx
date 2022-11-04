@@ -41,7 +41,7 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
       >
         <Heading as='h3' size='sm'>
           <Flex alignItems='center'>
-            <Badge colorScheme={project.isActive ? 'green' : 'red'}>
+            <Badge p='2' borderRadius='full' colorScheme={project.isActive ? 'green' : 'red'}>
               {project.isActive ? 'active' : 'idle'}
             </Badge>
             <Box as='span' ml='2.5'>

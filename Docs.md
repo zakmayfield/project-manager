@@ -1,8 +1,21 @@
 # Simple Documentation
 
+## Start App
+
+- `npm run api`
+
+  - server will run on port `4000`
+  - the 'db' is just a json object located in `./api/db.json`
+  - `json-server` is running our 'db' which gives us routes we can hit to access data
+  - changes made using an HTTP request will update the db.json using `lowdb`
+
+- `npm start`
+
+---
+
 ## Headings
 
-- `h1 - h4` will me `lg`, `md`, `sm`, `xs` in that order 
+- `h1 - h4` will me `lg`, `md`, `sm`, `xs` in that order
 
 ```tsx
 <Box>
@@ -24,6 +37,8 @@
 </Box>
 ```
 
+---
+
 ## Text
 
 - Default `Text` will be `md`
@@ -37,10 +52,13 @@
 </Box>
 ```
 
+---
+
 ## Color
 
 - App Background Color
-    - `#f0f0f0`
+
+  - `#f0f0f0`
 
 - App Color (text)
-    - `#171717`
+  - `#171717`
