@@ -34,7 +34,7 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
         bg='gray.300'
         p='5'
         flex='1'
-        // flex will tell each item to take up 100 percent of the space it has on it's row, this means any cards that are smaller will retain the same height dimensions as the rest of the cards
+        // flex will tell each description to take up 100 percent of the space it has on it's row, this means any cards that are smaller will retain the same height dimensions as the rest of the cards
         justifyContent='space-around'
         borderBottomRadius='lg'
       >

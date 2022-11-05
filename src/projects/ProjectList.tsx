@@ -32,8 +32,8 @@ function ProjectList({ projects, onSave }: ProjectListProps) {
       p='5'
     >
       {projects.map((project) => (
-        <Flex key={project.id} flex='1' minW='xs' maxW='md'>
-          {/* The last projects being rendered are larger than the rest - this should be updated */}
+        <Flex key={project.id} flex='1' minW='xs' maxW='lg'>
+          {/* setting flex='1' here will tell the item to grow to 100% of it's available space (until maxW is reached then it pops a new item onto the same row). This allows the card's to have responsive styling */}
           {project === projectToEdit ? (
             <ProjectForm
               key={project.id}
