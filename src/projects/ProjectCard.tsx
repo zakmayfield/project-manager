@@ -23,12 +23,9 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
 
   return (
     <Flex
-      maxW='sm'
       borderWidth='1px'
       borderRadius='lg'
-      my='2.5'
       flexDir='column'
-      textAlign='left'
     >
       <Image borderTopRadius='lg' src={project.imageUrl} />
       <Flex

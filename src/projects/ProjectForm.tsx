@@ -98,12 +98,10 @@ function ProjectForm({
 
   return (
     <Flex
-      minW='sm'
       borderWidth='1px'
       borderRadius='lg'
-      my='2.5'
       flexDir='column'
-      textAlign='left'
+      w='100%'
     >
       <Flex as='form' flexDir='column' p='2.5' alignItems='stretch'>
         {/* 

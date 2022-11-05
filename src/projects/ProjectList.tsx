@@ -1,5 +1,5 @@
 import ProjectCard from './ProjectCard';
-import { Box } from '@chakra-ui/react';
+import { Box, Flex } from '@chakra-ui/react';
 import { Project } from './Project';
 import { useState } from 'react';
 import ProjectForm from './ProjectForm';
@@ -24,9 +24,16 @@ function ProjectList({ projects, onSave }: ProjectListProps) {
   };
 
   return (
-    <Box display='flex' flexWrap='wrap' justifyContent='space-around'>
+    <Box
+      display='flex'
+      flexWrap='wrap'
+      gap='5'
+      justifyContent={{ base: 'center', lg: 'flex-start' }}
+      p='5'
+    >
       {projects.map((project) => (
-        <Box key={project.id}>
+        <Flex key={project.id} flex='1' minW='xs' maxW='md'>
+          {/* The last projects being rendered are larger than the rest - this should be updated */}
           {project === projectToEdit ? (
             <ProjectForm
               key={project.id}
@@ -41,7 +48,7 @@ function ProjectList({ projects, onSave }: ProjectListProps) {
               onEdit={handleEdit}
             />
           )}
-        </Box>
+        </Flex>
       ))}
     </Box>
   );

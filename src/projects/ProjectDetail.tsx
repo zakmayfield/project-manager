@@ -3,9 +3,7 @@ import {
   Box,
   Flex,
   Image,
-  Icon,
   Heading,
-  Button,
   Badge,
 } from '@chakra-ui/react';
 
@@ -17,6 +15,7 @@ function ProjectDetail({ project }: ProjectDetailProps) {
   return (
     <Flex
       maxW='xxl'
+      minW='sm'
       borderWidth='1px'
       borderRadius='lg'
       my='2.5'
