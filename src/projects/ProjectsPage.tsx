@@ -24,6 +24,7 @@ function ProjectsPage() {
           : setProjects((projects) => [...projects, ...data]);
       })
       .catch((e) => {
+        console.log('e', e)
         setLoading(false);
         setError(e.message);
         if (e instanceof Error) {
