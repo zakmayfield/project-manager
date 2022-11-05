@@ -16,7 +16,7 @@ interface ProjectDetailProps {
 function ProjectDetail({ project }: ProjectDetailProps) {
   return (
     <Flex
-      maxW='xl'
+      maxW='xxl'
       borderWidth='1px'
       borderRadius='lg'
       my='2.5'

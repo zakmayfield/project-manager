@@ -2,13 +2,8 @@ import { Box, Image, Flex, Button, Icon } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
 import { GrProjects } from 'react-icons/gr';
-import { useState } from 'react';
 
 function Header() {
-  const [activeLink, setActiveLink] = useState<string>('home');
-  const changeActiveLink = (linkTo: 'home' | 'projects') => {
-    linkTo === 'home' ? setActiveLink('home') : setActiveLink('projects');
-  };
   // I need to reconsider using react router to grab route paramaters and check if path is / or /projects then that will update the state as routes change, rather than event handlers
 
   return (
@@ -27,7 +22,6 @@ function Header() {
           <Image
             src='/assets/logo-3.svg'
             minW={{ base: 150, sm: 100 }}
-            onClick={() => changeActiveLink('home')}
           />
         </Link>
       </Box>
@@ -37,10 +31,8 @@ function Header() {
           <Link to='/'>
             <Button
               w='full'
-              variant={activeLink === 'home' ? 'solid' : 'outline'}
+              variant='outline'
               leftIcon={<Icon as={FaHome} />}
-              onClick={() => changeActiveLink('home')}
-            //   size={activeLink === 'home' ? 'lg' : 'md'}
             >
               Home
             </Button>
@@ -52,9 +44,7 @@ function Header() {
             <Button
               w='full'
               leftIcon={<Icon as={GrProjects} />}
-              variant={activeLink === 'projects' ? 'solid' : 'outline'}
-              onClick={() => changeActiveLink('projects')}
-            //   size={activeLink === 'projects' ? 'lg' : 'md'}
+              variant='outline'
             >
               Projects
             </Button>

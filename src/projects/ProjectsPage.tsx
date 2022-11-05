@@ -48,7 +48,6 @@ function ProjectsPage() {
   // if id === id then update that one project, else dont update anything
 
   const nextPage = () => {
-    // setLimit(limit + 4)
     setCurrentPage(currentPage + 1);
   };
 

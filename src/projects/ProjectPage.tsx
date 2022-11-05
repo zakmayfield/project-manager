@@ -29,7 +29,7 @@ function ProjectPage() {
   }, [id]);
 
   return (
-    <div>
+    <Flex w='100%' px='5' justifyContent='center'>
       {error && (
         <Flex w='100%' mt='5' justifyContent='center'>
           {error}
@@ -43,7 +43,7 @@ function ProjectPage() {
       )}
 
       {project && <ProjectDetail project={project} />}
-    </div>
+    </Flex>
   );
 }
 
