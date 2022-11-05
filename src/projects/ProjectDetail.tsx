@@ -1,29 +1,22 @@
 import { Project } from './Project';
 import {
+  Box,
   Flex,
   Image,
-  Heading,
-  Box,
-  Button,
   Icon,
+  Heading,
+  Button,
   Badge,
 } from '@chakra-ui/react';
-import { FaEdit } from 'react-icons/fa';
-import { FiEye } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
 
-interface ProjectCardProps {
+interface ProjectDetailProps {
   project: Project;
-  onEdit: (project: Project) => void;
 }
-// we are defining a schema for our props, an object with a 'project' property, this proptery will be an object in the shape of 'Project'
 
-function ProjectCard({ project, onEdit }: ProjectCardProps) {
-  // we destructure the 'project' prop and are able to access the data within 'project' which as we know takes the shape of Project
-
+function ProjectDetail({ project }: ProjectDetailProps) {
   return (
     <Flex
-      maxW='sm'
+      maxW='xl'
       borderWidth='1px'
       borderRadius='lg'
       my='2.5'
@@ -63,7 +56,7 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
         <Box as='p'>Budget: ${Number(project.budget).toLocaleString()}</Box>
         {/* toLocaleString will format the number from 1000 to 1,000 */}
 
-        <Flex alignItems='flex-end' justifyContent='space-between'>
+        {/* <Flex alignItems='flex-end' justifyContent='space-between'>
           <Button
             leftIcon={<Icon as={FaEdit} />}
             size='md'
@@ -74,15 +67,13 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
             Edit
           </Button>
 
-          <Link to={`/projects/${project.id}`} >
-            <Button>
-              <Icon as={FiEye} />
-            </Button>
-          </Link>
-        </Flex>
+          <Button>
+            <Icon as={FiEye} />
+          </Button>
+        </Flex> */}
       </Flex>
     </Flex>
   );
 }
 
-export default ProjectCard;
+export default ProjectDetail;

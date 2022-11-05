@@ -62,6 +62,17 @@ const projectAPI = {
             })
     },
 
+    find(id: number | undefined) {
+        return fetch(`${url}/${id}`)
+            .then(checkStatus)
+            .then(parseJSON)
+            .then(convertToProjectModel)
+            .catch((error: TypeError) => {
+                console.log('log client error: ' + error)
+                throw new Error('There was an error retrieving the projects')
+            })
+    },
+
     put(project: Project) {
         return fetch(`${url}/${project.id}`, {
             method: 'PUT',

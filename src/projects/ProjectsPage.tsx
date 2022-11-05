@@ -10,7 +10,7 @@ function ProjectsPage() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | undefined>(undefined);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [limit, setLimit] = useState<number>(4);
+  const [limit] = useState<number>(4);
 
   useEffect(() => {
     setLoading(true);
