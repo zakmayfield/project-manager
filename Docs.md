@@ -1,6 +1,10 @@
 # Simple Documentation
 
-## DB is hosted on `heroku`
+# React app is hosted on `vercel`
+
+  - `https://project-manager-gilt.vercel.app/`
+
+# DB is hosted on `heroku`
 
 - The main `endpoint` for this application is `https://fake-server-1-mayfield.herokuapp.com/`
 
@@ -10,7 +14,9 @@
 
 - The db is being served by `json-server`
 
-## Start App (Locally)
+# Start App (Local DB)
+
+- Ensure endpoint is set to `http://localhost:4000`
 
 - `npm run api`
 
@@ -23,7 +29,7 @@
 
 ---
 
-## Headings
+# Headings
 
 - `h1 - h4` will me `lg`, `md`, `sm`, `xs` in that order
 
@@ -49,7 +55,7 @@
 
 ---
 
-## Text
+# Text
 
 - Default `Text` will be `md`
 
@@ -64,7 +70,7 @@
 
 ---
 
-## Color
+# Color
 
 - App Background Color
 
