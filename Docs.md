@@ -1,6 +1,16 @@
 # Simple Documentation
 
-## Start App
+## DB is hosted on `heroku`
+
+- The main `endpoint` for this application is `https://fake-server-1-mayfield.herokuapp.com/`
+
+- The only available `route` is `/projects`
+
+- This `/projects` route has all available HTTP methods attached with `no validation`
+
+- The db is being served by `json-server`
+
+## Start App (Locally)
 
 - `npm run api`
 
