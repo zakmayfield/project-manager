@@ -63,12 +63,12 @@ function ProjectDetail({ project }: ProjectDetailProps) {
 
         <Flex alignItems='flex-end' justifyContent='space-between' mt='2.5'>
           <Button
-            leftIcon={<Icon as={AiOutlineRollback} />}
+            // leftIcon={<Icon as={AiOutlineRollback} />}
             size='md'
             mt='2.5'
             onClick={() => navigate(-1)}
           >
-            Back
+            <Icon as={AiOutlineRollback} />
           </Button>
         </Flex>
       </Flex>
