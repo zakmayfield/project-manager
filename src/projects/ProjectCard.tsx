@@ -22,11 +22,7 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
   // we destructure the 'project' prop and are able to access the data within 'project' which as we know takes the shape of Project
 
   return (
-    <Flex
-      borderWidth='1px'
-      borderRadius='lg'
-      flexDir='column'
-    >
+    <Flex borderWidth='1px' borderRadius='lg' flexDir='column'>
       <Image borderTopRadius='lg' src={project.imageUrl} />
       <Flex
         flexDir='column'
@@ -57,7 +53,7 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
           {/* noOfLines will limit the description to 3 lines of real estate, after which the description is truncated to '...' */}
           {project.description}
         </Box>
-        <Box as='p'>Budget: ${Number(project.budget).toLocaleString()}</Box>
+        <Box as='p' fontSize='sm'>Budget: ${Number(project.budget).toLocaleString()}</Box>
         {/* toLocaleString will format the number from 1000 to 1,000 */}
 
         <Flex alignItems='flex-end' justifyContent='space-between'>
@@ -71,7 +67,7 @@ function ProjectCard({ project, onEdit }: ProjectCardProps) {
             Edit
           </Button>
 
-          <Link to={`/projects/${project.id}`} >
+          <Link to={`/projects/${project.id}`}>
             <Button>
               <Icon as={FiEye} />
             </Button>

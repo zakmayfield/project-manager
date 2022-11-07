@@ -33,7 +33,11 @@ function Header() {
     >
       <Box mr='2.5'>
         <Link to='/'>
-          <Image src='/assets/logo-3.svg' minW={{ base: 150, sm: 100 }} />
+          <Image
+            src='/assets/acme-logo.png'
+            minW={{ base: 150, sm: 100 }}
+            maxW={{base: 250, sm: 200}}
+          />
         </Link>
       </Box>
 
