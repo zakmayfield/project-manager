@@ -1,4 +1,5 @@
 import { Heading, Box } from '@chakra-ui/react';
+// import HomeImageUpload from './HomeImageUpload';
 
 function HomePage() {
   return (

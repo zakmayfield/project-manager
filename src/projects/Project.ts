@@ -7,7 +7,7 @@ export class Project {
   contractSignedOn: Date = new Date();
   budget: string = '';
   // i changed this type to be a string because of input issues
-  // the default initialized value was 0 which could never be removed, unless other numbers were intered
+  // the default initialized value was 0 which could never be removed, unless other numbers were entered
   isActive: boolean = false;
   get isNew(): boolean {
     return this.id === undefined;

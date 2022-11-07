@@ -1,3 +1,7 @@
+/*
+    This file can be used across other apps i make with the same general flow for calling API's, create an object that contains methods calling axios
+*/
+
 import {Project} from './Project'
 const baseURL = 'https://fake-server-1-mayfield.herokuapp.com';
 const url = `${baseURL}/projects`

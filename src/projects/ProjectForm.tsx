@@ -110,6 +110,7 @@ function ProjectForm({
         <FormControl mb='4' isRequired>
           <FormLabel>Project Name</FormLabel>
           <Input
+            autoFocus
             placeholder='Project Name'
             name='name'
             type='text'
