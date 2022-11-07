@@ -5,13 +5,19 @@ import {
   Image,
   Heading,
   Badge,
+  Button,
+  Icon,
 } from '@chakra-ui/react';
+import { AiOutlineRollback } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 interface ProjectDetailProps {
   project: Project;
 }
 
 function ProjectDetail({ project }: ProjectDetailProps) {
+  const navigate = useNavigate();
+
   return (
     <Flex
       maxW='xxl'
@@ -21,6 +27,7 @@ function ProjectDetail({ project }: ProjectDetailProps) {
       my='2.5'
       flexDir='column'
       textAlign='left'
+      fontSize='lg'
     >
       <Image borderTopRadius='lg' src={project.imageUrl} />
       <Flex
@@ -29,7 +36,6 @@ function ProjectDetail({ project }: ProjectDetailProps) {
         bg='gray.300'
         p='5'
         flex='1'
-        // flex will tell each item to take up 100 percent of the space it has on it's row, this means any cards that are smaller will retain the same height dimensions as the rest of the cards
         justifyContent='space-around'
         borderBottomRadius='lg'
       >
@@ -48,28 +54,23 @@ function ProjectDetail({ project }: ProjectDetailProps) {
           </Flex>
         </Heading>
 
-        <Box as='p' my='2.5' noOfLines={2}>
-          {/* noOfLines will limit the description to 3 lines of real estate, after which the description is truncated to '...' */}
+        <Box as='p' my='2.5'>
           {project.description}
         </Box>
-        <Box as='p'>Budget: ${Number(project.budget).toLocaleString()}</Box>
-        {/* toLocaleString will format the number from 1000 to 1,000 */}
+        <Box as='p' fontSize='md'>
+          Budget: ${Number(project.budget).toLocaleString()}
+        </Box>
 
-        {/* <Flex alignItems='flex-end' justifyContent='space-between'>
+        <Flex alignItems='flex-end' justifyContent='space-between' mt='2.5'>
           <Button
-            leftIcon={<Icon as={FaEdit} />}
+            leftIcon={<Icon as={AiOutlineRollback} />}
             size='md'
             mt='2.5'
-            w='33%'
-            onClick={() => onEdit(project)}
+            onClick={() => navigate(-1)}
           >
-            Edit
+            Back
           </Button>
-
-          <Button>
-            <Icon as={FiEye} />
-          </Button>
-        </Flex> */}
+        </Flex>
       </Flex>
     </Flex>
   );

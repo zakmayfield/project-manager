@@ -42,7 +42,7 @@ function ProjectForm({
     if (project.description.length === 0) {
       errors.description = 'Description is required';
     }
-    if (project.budget.length === 0 || project.budget === '0') {
+    if (project.budget.length === 0 || Number(project.budget) < 1) {
       errors.budget = 'Budget must be more than $0';
     }
 
